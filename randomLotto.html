@@ -25,11 +25,13 @@
       // ...
       // ...
 
+
       $("#random-button").on("click", function() {
 
         var array = [];
         var winningNumber = [];
-        var winnerHistory = [];
+        var winningDate = [];
+        
 
         for (i = 0; i < 9; i++) {
 
@@ -39,15 +41,20 @@
         
         }
           winningNumber = array.join(" ");
-          winnerHistory.push(winningNumber,Date());
+
+      winnerHistory.push([winningNumber,Date()]); 
 
         $("#random-number").prepend("<li>" + winningNumber + "</li>");
-        $("#random-number").append("<li>" + winnerHistory + "</li>");
+      //  $("#random-number").append("<li>" + winnerHistory + "</li>");
 
       })
 
     });
+
+    // user the Console in the browser and input the variable "winnerHistory" to receive the time and date for the winning lottery number. Be sture to click the drop down arrow to expand the arrays.
+
+    var winnerHistory = []; 
   </script>
-  
+   
 </body>
 </html>
